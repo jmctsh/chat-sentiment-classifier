@@ -51,11 +51,9 @@ logs/
 
 # Data (large files)
 data/raw/
-data/processed/*.csv
 
 # Keep data structure
 !data/raw/.gitkeep
-!data/processed/.gitkeep
 !data/raw/meme_supplement.csv
 !data/raw/meme_supplement_README.md
 
