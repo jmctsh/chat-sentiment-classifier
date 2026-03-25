@@ -22,11 +22,12 @@ game_sentiment_classifier/
 │   └── dataset.py         # 数据集类
 ├── models/
 │   └── model.py           # 模型定义（BERT+MLP）
-├── outputs/
-│   └── checkpoints/       # 模型检查点
+├── checkpoints/           # 模型检查点
+│   └── best_model.pt      # 最佳模型
 ├── train.py               # 训练脚本
 ├── inference.py           # 推理脚本
 ├── evaluate.py            # 评估脚本
+├── app_gui.py             # 桌面应用（Tkinter）
 └── README.md
 ```
 
@@ -97,6 +98,29 @@ python train.py
 ```bash
 python inference.py
 ```
+
+### 5. 启动桌面应用
+
+```bash
+python app_gui.py
+```
+
+#### 桌面应用功能
+
+| 功能 | 说明 |
+|------|------|
+| 情绪分类 | 输入文本，自动识别情绪类别 |
+| 智能回复 | 豆包LLM以贴吧老哥风格回复 |
+| 联网搜索 | 玩梗时自动搜索了解梗的含义 |
+
+#### 回复策略
+
+| 分类 | 回复策略 |
+|------|----------|
+| 🟢 善意 | 友善回应 |
+| 🔴 辱骂 | 怼回去（文明用语） |
+| ⚪ 中性 | 正常回复 |
+| 🟡 玩梗 | 接梗或搜索后回复 |
 
 ---
 

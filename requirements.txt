@@ -7,3 +7,5 @@ datasets>=2.14.0
 accelerate>=0.21.0
 jieba>=0.42.1
 emoji>=2.8.0
+gradio>=4.0.0
+volcengine-python-sdk[ark]>=1.0.0
