@@ -42,8 +42,11 @@ env/
 *.bin
 *.safetensors
 outputs/
-checkpoints/
 logs/
+
+# Keep best model
+!checkpoints/
+!checkpoints/best_model.pt
 
 # Hugging Face Cache
 .cache/
